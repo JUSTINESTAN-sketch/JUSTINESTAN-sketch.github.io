@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justine Sulit Tan - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #60a5fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            color: var(--primary-color);
+        }
+        
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+        }
+        
+        .skill-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+        }
+        
+        .contact-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .navbar {
+            transition: background 0.3s;
+        }
+        
+        .navbar.scrolled {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar.scrolled .nav-link {
+            color: #1f2937 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: transparent;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">JST</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold mb-3">Justine Sulit Tan</h1>
+                    <h3 class="mb-4">Aspiring Full-Stack Developer</h3>
+                    <p class="lead mb-4">Student at Trinity University of Asia | Passionate about mastering coding and building innovative solutions</p>
+                    <div class="social-links">
+                        <a href="#" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" title="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                       <img src="D:\school\portfolio\justine.jpg" alt="Justine Sulit Tan" class="profile-img mx-auto">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <p class="lead">Hello! I'm Justine Sulit Tan, a dedicated student at Trinity University of Asia with a passion for technology and software development.</p>
+                    <p>I'm on a journey to master full-stack development, continuously learning and building projects to expand my skills. My goal is to create meaningful applications that solve real-world problems and provide great user experiences.</p>
+                    <p>I believe in the power of clean code, continuous learning, and collaboration. Every day is an opportunity to learn something new and improve my craft.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Quick Info</h5>
+                            <p><strong>Location:</strong> Philippines</p>
+                            <p><strong>University:</strong> Trinity University of Asia</p>
+                            <p><strong>Focus:</strong> Full-Stack Development</p>
+                            <p><strong>Status:</strong> Student & Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-md-8 text-center">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">C++</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="text-muted mb-5">Here are some of my recent works and projects</p>
+            
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <div class="project-img">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Book Review Hub</h5>
+                            <p class="card-text">A web application for discovering and sharing book reviews. Users can browse books, read reviews, and share their own thoughts on their favorite reads.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">Firebase</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <div class="project-img">
+                            <i class="bi bi-controller"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">LeBron James V Draymond Green</h5>
+                            <p class="card-text">An interactive browser-based game featuring LeBron James. Built purely with HTML to showcase creative web development and game mechanics.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-primary">CSS</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="lead mt-4 mb-5">I'm always open to discussing new projects, opportunities, or collaborations.</p>
+            <div>
+                <a href="mailto:justinestan@tua.edu.ph" class="contact-btn">
+                    <i class="bi bi-envelope me-2"></i>Send Email
+                </a>
+                <a href="https://github.com/yourusername" class="contact-btn">
+                    <i class="bi bi-github me-2"></i>GitHub
+                </a>
+                <a href="https://instagram.com/jussssssssssy" class="contact-btn">
+                    <i class="bi bi-instagram me-2"></i>Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Justine Sulit Tan. All rights reserved.</p>
+            <p class="mb-0 mt-2 small">Made with <i class="bi bi-heart-fill text-danger"></i> and Bootstrap</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
